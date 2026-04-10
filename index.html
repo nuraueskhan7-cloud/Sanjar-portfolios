@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sanjar Qabdylghani | Frontend Engineer & UI/UX Designer</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,6 +16,13 @@
     <header class="navbar">
         <div class="container nav-container">
             <div class="logo">SANJAR<span>.DEV</span></div>
+            
+            <button class="mobile-nav-toggle" aria-label="Открыть меню">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
             <nav>
                 <ul class="nav-menu">
                     <li><a href="#" class="nav-link active" data-target="home">Home</a></li>
@@ -36,7 +45,7 @@
                     </div>
                     <h1>Crafting Digital <br><span class="gradient-text">Experiences.</span></h1>
                     <p class="hero-desc">
-                        As a second-year Software Engineering student, I bridge the gap between traditional aesthetics and modern web performance. Specializing in high-fidelity Frontend development and user-centric UI/UX design.
+                        As a second-year Software Engineering student, I bridge the gap between traditional aesthetics and modern web performance.
                     </p>
                     <div class="cta-row">
                         <button class="btn btn-primary nav-link" data-target="projects">View Case Study</button>
@@ -51,14 +60,10 @@
                 <h2 class="section-title">Professional Background</h2>
                 <div class="text-block">
                     <h3>The Academic Foundation</h3>
-                    <p>Currently pursuing a Bachelor's degree in Digital & Intelligent Technologies, my academic journey is focused on the intersection of human-computer interaction and scalable software architecture. Being in my second year, I have already mastered the fundamentals of data structures, algorithms, and responsive design principles.</p>
+                    <p>Currently pursuing a Bachelor's degree in Digital & Intelligent Technologies. I focus on human-computer interaction and scalable software architecture.</p>
 
-                    <h3>The Digital Almaty Victory</h3>
-                    <p>In 2025, I participated in the prestigious "Digital Almaty" hackathon. Competing against hundreds of talented developers, my project—a modern digital ecosystem for a local ethnic clothing brand—secured 1st place in the "Junior Web Design" category. This achievement was not just about aesthetic appeal, but about solving a real-world business challenge: digitizing cultural heritage for the Gen-Z market.</p>
-                </div>
-
-                <div class="cta-row" style="margin-bottom: 50px;">
-                    <button class="btn btn-primary nav-link" data-target="contact">Start a Conversation</button>
+                    <h3>Digital Almaty Victory</h3>
+                    <p>My project—a modern digital ecosystem—secured 1st place in "Junior Web Design" in 2025.</p>
                 </div>
 
                 <div class="stats-row">
@@ -80,22 +85,15 @@
 
         <section id="projects" class="tab-content">
             <div class="container content-rich">
-                <h2 class="section-title">Case Study: Ethno-Modernity</h2>
+                <h2 class="section-title">Case Study</h2>
                 <div class="project-showcase">
                     <div class="project-text">
                         <h3>Nomad Modernity E-Commerce</h3>
-                        <p><strong>The Challenge:</strong> Local ethnic brands often struggle with digital visibility. The goal was to create a landing page that reflects the soul of traditional clothing while providing a world-class shopping experience.</p>
-
-                        <h4>Key Features:</h4>
-                        <ul>
-                            <li><strong>Dynamic Catalog:</strong> Implemented using custom JavaScript for seamless filtering without page reloads.</li>
-                            <li><strong>Cultural UI Kit:</strong> Designed a custom design system that integrates traditional ornaments into a minimalist, "clean" tech interface.</li>
-                            <li><strong>Performance Optimization:</strong> Achieved a 95+ score on Google Lighthouse by optimizing assets and minifying core CSS/JS.</li>
-                        </ul>
-                        <button class="btn btn-outline nav-link" data-target="contact" style="margin-top: 20px;">Inquire About This Case</button>
+                        <p>Designing a landing page that reflects traditional clothing with a world-class shopping experience.</p>
+                        <button class="btn btn-outline nav-link" data-target="contact">Inquire Now</button>
                     </div>
                     <div class="project-visual">
-                        <img src="assets/images/project-ethno.jpg" alt="Ethno Brand Project" class="case-study-img">
+                        <img src="assets/images/project-ethno.jpg" alt="Ethno Project" class="case-study-img">
                     </div>
                 </div>
             </div>
@@ -106,24 +104,13 @@
                 <h2 class="section-title">Technical Expertise</h2>
                 <div class="skills-detailed-grid">
                     <div class="skill-group">
-                        <h3>Core Development</h3>
-                        <p>Semantic HTML5, CSS3 with SCSS capabilities, Modern ES6+ JavaScript. Proficient in DOM manipulation, Fetch API, and asynchronous programming.</p>
+                        <h3>Development</h3>
+                        <p>Semantic HTML5, CSS3, Modern ES6+ JavaScript.</p>
                     </div>
                     <div class="skill-group">
-                        <h3>Design & UI/UX</h3>
-                        <p>Expertise in Figma for wireframing and prototyping. Strong understanding of typography, color theory, and accessibility (WCAG) standards.</p>
+                        <h3>Design</h3>
+                        <p>Figma prototyping, typography, and accessibility standards.</p>
                     </div>
-                    <div class="skill-group">
-                        <h3>Workflow & Tools</h3>
-                        <p>Git version control, Command Line proficiency, and Cross-browser testing. Experience with build tools and asset optimization.</p>
-                    </div>
-                    <div class="skill-group">
-                        <h3>Soft Skills</h3>
-                        <p>Agile methodology, rapid prototyping under pressure (Hackathon-tested), and professional communication in a team environment.</p>
-                    </div>
-                </div>
-                <div class="cta-row" style="margin-top: 50px; justify-content: center;">
-                    <button class="btn btn-primary nav-link" data-target="contact">Hire Me Now</button>
                 </div>
             </div>
         </section>
@@ -132,14 +119,6 @@
             <div class="container">
                 <h2 class="section-title">Get In Touch</h2>
                 <div class="contact-wrapper">
-                    <div class="contact-info">
-                        <p>I am currently looking for internship opportunities and freelance projects. If you are looking for a developer who understands both the code and the user, let's talk.</p>
-                        <div class="socials">
-                            <a href="#">LinkedIn</a>
-                            <a href="#">GitHub</a>
-                            <a href="#">Telegram</a>
-                        </div>
-                    </div>
                     <form class="contact-form">
                         <input type="text" placeholder="Full Name" required>
                         <input type="email" placeholder="Email Address" required>
@@ -153,7 +132,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Sanjar Qabdylghani. Built with passion and precision.</p>
+            <p>&copy; 2026 Sanjar Qabdylghani.</p>
         </div>
     </footer>
 
