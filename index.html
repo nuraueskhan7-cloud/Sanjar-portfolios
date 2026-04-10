@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Sanjar Qabdylghani | Premium Portfolio</title>
+    <title>Sanjar Qabdylghani | Frontend Engineer & UI/UX Designer</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
 </head>
@@ -15,13 +15,9 @@
 
     <header class="navbar">
         <div class="container nav-container">
-            <div class="logo">
-                <a href="#" class="nav-link" data-target="home">
-                    SANJAR<span>.DEV</span>
-                </a>
-            </div>
+            <div class="logo">SANJAR<span>.DEV</span></div>
             
-            <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Menu">
+            <button class="mobile-nav-toggle" id="menu-toggle" aria-label="Toggle Navigation">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -29,36 +25,29 @@
 
             <nav class="nav-wrapper">
                 <ul class="nav-menu">
-                    <li class="nav-item"><a href="#" class="nav-link active" data-target="home">Home</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link" data-target="about">Experience</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link" data-target="projects">Case Study</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link" data-target="skills">Expertise</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link" data-target="contact">Contact</a></li>
+                    <li><a href="#" class="nav-link active" data-target="home">Home</a></li>
+                    <li><a href="#" class="nav-link" data-target="about">Experience</a></li>
+                    <li><a href="#" class="nav-link" data-target="projects">Case Study</a></li>
+                    <li><a href="#" class="nav-link" data-target="skills">Expertise</a></li>
+                    <li><a href="#" class="nav-link" data-target="contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main id="content-root">
-        
+    <main id="content-area">
         <section id="home" class="tab-content active">
-            <div class="container hero-layout">
-                <div class="hero-inner">
-                    <div class="status-badge">
-                        <span class="badge-dot"></span>
-                        <span class="badge-text">1st Place Winner @ Digital Almaty 2025</span>
+            <div class="container hero">
+                <div class="hero-text">
+                    <div class="award-label">
+                        <span class="icon">🏆</span>
+                        First Place Winner @ Digital Almaty 2025
                     </div>
-                    
-                    <h1 class="hero-headline">
-                        Crafting Digital <br>
-                        <span class="gradient-text">Experiences.</span>
-                    </h1>
-                    
+                    <h1>Crafting Digital <br><span class="gradient-text">Experiences.</span></h1>
                     <p class="hero-desc">
                         As a second-year Software Engineering student, I bridge the gap between traditional aesthetics and modern web performance.
                     </p>
-                    
-                    <div class="hero-btns">
+                    <div class="cta-row">
                         <button class="btn btn-primary nav-link" data-target="projects">View Case Study</button>
                         <button class="btn btn-outline nav-link" data-target="about">My Journey</button>
                     </div>
@@ -67,81 +56,59 @@
         </section>
 
         <section id="about" class="tab-content">
-            <div class="container page-padding">
-                <div class="header-group">
-                    <h2 class="page-title">Professional Background</h2>
-                    <div class="accent-line"></div>
-                </div>
-                
-                <div class="experience-layout">
-                    <div class="exp-content">
-                        <h3>The Academic Foundation</h3>
-                        <p>Currently pursuing a Bachelor's degree in Digital & Intelligent Technologies at S. Seifullin University. My focus lies in human-computer interaction and building scalable software architectures.</p>
-                        
-                        <h3>Digital Almaty Victory</h3>
-                        <p>In 2025, my project secured the top spot in the "Junior Web Design" category, demonstrating my ability to deliver industry-standard solutions under pressure.</p>
-                    </div>
+            <div class="container content-rich">
+                <h2 class="section-title">Professional Background</h2>
+                <div class="text-block">
+                    <h3>The Academic Foundation</h3>
+                    <p>Currently pursuing a Bachelor's degree in Digital & Intelligent Technologies. My focus lies in human-computer interaction and building scalable software architectures.</p>
                     
-                    <div class="stats-grid">
-                        <div class="stat-box">
-                            <div class="stat-num" data-val="24">0</div><span class="stat-unit">h</span>
-                            <p class="stat-desc">Hackathon Sprint</p>
-                        </div>
-                        <div class="stat-box">
-                            <div class="stat-num" data-val="1">0</div><span class="stat-unit">#</span>
-                            <p class="stat-desc">Global Ranking</p>
-                        </div>
-                        <div class="stat-box">
-                            <div class="stat-num" data-val="100">0</div><span class="stat-unit">%</span>
-                            <p class="stat-desc">Responsive Design</p>
-                        </div>
+                    <h3>Digital Almaty Victory</h3>
+                    <p>In 2025, my project secured the top spot in the "Junior Web Design" category, demonstrating my ability to deliver industry-standard solutions.</p>
+                </div>
+
+                <div class="stats-row">
+                    <div class="stat-card">
+                        <span class="stat-num">24h</span>
+                        <span class="stat-label">Hackathon Sprint</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num">#1</span>
+                        <span class="stat-label">Ranking</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num">100%</span>
+                        <span class="stat-label">Responsive</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="projects" class="tab-content">
-            <div class="container page-padding">
-                <div class="header-group">
-                    <h2 class="page-title">Case Study</h2>
-                    <div class="accent-line"></div>
-                </div>
-                
-                <div class="case-card">
-                    <div class="case-info">
-                        <span class="case-tag">Web Development & Design</span>
+            <div class="container content-rich">
+                <h2 class="section-title">Case Study</h2>
+                <div class="project-showcase">
+                    <div class="project-text">
                         <h3>Nomad Modernity E-Commerce</h3>
-                        <p>A deep dive into creating a landing page that respects traditional Kazakh clothing while delivering a world-class digital shopping experience.</p>
-                        <div class="tech-stack">
-                            <span>Figma</span>
-                            <span>React</span>
-                            <span>UI/UX</span>
-                        </div>
+                        <p>Designing a landing page that reflects traditional clothing with a world-class shopping experience.</p>
                         <button class="btn btn-outline nav-link" data-target="contact">Inquire Now</button>
                     </div>
-                    <div class="case-media">
-                        <img src="assets/images/project-ethno.jpg" alt="Case Study" class="case-img">
+                    <div class="project-visual">
+                        <img src="assets/images/project-ethno.jpg" alt="Ethno Project" class="case-study-img">
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="skills" class="tab-content">
-            <div class="container page-padding">
-                <div class="header-group">
-                    <h2 class="page-title">Technical Expertise</h2>
-                    <div class="accent-line"></div>
-                </div>
-                
-                <div class="skills-grid-detailed">
-                    <div class="skill-item">
-                        <div class="skill-icon-box">💻</div>
-                        <h4>Development</h4>
-                        <p>Expertise in semantic HTML5, CSS3 (SCSS), and modern ES6+ JavaScript. Building performant, accessible web applications.</p>
+            <div class="container content-rich">
+                <h2 class="section-title">Technical Expertise</h2>
+                <div class="skills-detailed-grid">
+                    <div class="skill-group">
+                        <h3>Development</h3>
+                        <p>Semantic HTML5, CSS3 (SCSS), and modern ES6+ JavaScript. Building performant, accessible web applications.</p>
                     </div>
-                    <div class="skill-item">
-                        <div class="skill-icon-box">🎨</div>
-                        <h4>Design</h4>
+                    <div class="skill-group">
+                        <h3>Design</h3>
                         <p>Creating high-fidelity prototypes in Figma, focusing on typography, grid systems, and user behavior patterns.</p>
                     </div>
                 </div>
@@ -149,44 +116,31 @@
         </section>
 
         <section id="contact" class="tab-content">
-            <div class="container page-padding">
-                <div class="contact-flex">
-                    <div class="contact-text">
-                        <h2 class="page-title">Let's Connect</h2>
-                        <p>I am always open to discussing new projects, creative ideas or opportunities to be part of your vision.</p>
-                        <div class="footer-socials">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <p>I am currently looking for internship opportunities and freelance projects. Let's talk.</p>
+                        <div class="socials">
                             <a href="#">LinkedIn</a>
                             <a href="#">GitHub</a>
                             <a href="#">Telegram</a>
                         </div>
                     </div>
-                    
-                    <div class="contact-form-box">
-                        <form id="p-form" class="main-form">
-                            <div class="f-group">
-                                <label>Full Name</label>
-                                <input type="text" placeholder="Sanjar Qabdylghani" required>
-                            </div>
-                            <div class="f-group">
-                                <label>Email</label>
-                                <input type="email" placeholder="example@mail.com" required>
-                            </div>
-                            <div class="f-group">
-                                <label>Message</label>
-                                <textarea rows="5" placeholder="Tell me about your project" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary w-full">Send Message</button>
-                        </form>
-                    </div>
+                    <form class="contact-form">
+                        <input type="text" placeholder="Full Name" required>
+                        <input type="email" placeholder="Email Address" required>
+                        <textarea placeholder="Message" rows="6" required></textarea>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="main-footer">
-        <div class="container footer-inner">
-            <div class="f-logo">SANJAR<span>.DEV</span></div>
-            <p class="f-copy">&copy; 2026 Sanjar Qabdylghani. All rights reserved.</p>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Sanjar Qabdylghani. Built with passion and precision.</p>
         </div>
     </footer>
 
