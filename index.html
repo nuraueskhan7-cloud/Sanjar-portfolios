@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Sanjar Qabdylghani | Frontend Engineer & UI/UX Designer</title>
+    <title>Sanjar Qabdylghani | Premium Portfolio</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +21,7 @@
                 </a>
             </div>
             
-            <button class="mobile-nav-toggle" id="mobile-menu-btn" aria-label="Открыть навигацию">
+            <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -29,90 +29,71 @@
 
             <nav class="nav-wrapper">
                 <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link active" data-target="home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link" data-target="about">Experience</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link" data-target="projects">Case Study</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link" data-target="skills">Expertise</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link" data-target="contact">Contact</a>
-                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link active" data-target="home">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link" data-target="about">Experience</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link" data-target="projects">Case Study</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link" data-target="skills">Expertise</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link" data-target="contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main id="main-runtime">
+    <main id="content-root">
         
         <section id="home" class="tab-content active">
-            <div class="container hero-wrapper">
-                <div class="hero-content">
-                    <div class="badge-container">
-                        <div class="award-badge">
-                            <span class="badge-icon">🏆</span>
-                            <span class="badge-text">1st Place Winner @ Digital Almaty 2025</span>
-                        </div>
+            <div class="container hero-layout">
+                <div class="hero-inner">
+                    <div class="status-badge">
+                        <span class="badge-dot"></span>
+                        <span class="badge-text">1st Place Winner @ Digital Almaty 2025</span>
                     </div>
                     
-                    <h1 class="hero-title">
+                    <h1 class="hero-headline">
                         Crafting Digital <br>
                         <span class="gradient-text">Experiences.</span>
                     </h1>
                     
-                    <p class="hero-subtitle">
+                    <p class="hero-desc">
                         As a second-year Software Engineering student, I bridge the gap between traditional aesthetics and modern web performance.
                     </p>
                     
-                    <div class="hero-actions">
-                        <button class="btn btn-primary nav-link" data-target="projects">
-                            View Case Study
-                        </button>
-                        <button class="btn btn-outline nav-link" data-target="about">
-                            My Journey
-                        </button>
+                    <div class="hero-btns">
+                        <button class="btn btn-primary nav-link" data-target="projects">View Case Study</button>
+                        <button class="btn btn-outline nav-link" data-target="about">My Journey</button>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="about" class="tab-content">
-            <div class="container section-padding">
-                <div class="section-header">
-                    <h2 class="section-title">Professional Background</h2>
-                    <div class="title-underline"></div>
+            <div class="container page-padding">
+                <div class="header-group">
+                    <h2 class="page-title">Professional Background</h2>
+                    <div class="accent-line"></div>
                 </div>
                 
-                <div class="experience-grid">
-                    <div class="exp-text">
+                <div class="experience-layout">
+                    <div class="exp-content">
                         <h3>The Academic Foundation</h3>
-                        <p>Currently pursuing a Bachelor's degree in Digital & Intelligent Technologies. My focus lies in human-computer interaction and building scalable software architectures that solve real-world problems.</p>
+                        <p>Currently pursuing a Bachelor's degree in Digital & Intelligent Technologies at S. Seifullin University. My focus lies in human-computer interaction and building scalable software architectures.</p>
                         
                         <h3>Digital Almaty Victory</h3>
-                        <p>In 2025, my project—a modern digital ecosystem—secured the top spot in the "Junior Web Design" category, demonstrating my ability to deliver industry-standard solutions under pressure.</p>
+                        <p>In 2025, my project secured the top spot in the "Junior Web Design" category, demonstrating my ability to deliver industry-standard solutions under pressure.</p>
                     </div>
                     
-                    <div class="stats-container">
-                        <div class="stat-card">
-                            <div class="stat-value" data-value="24">0</div>
-                            <div class="stat-suffix">h</div>
-                            <div class="stat-label">Hackathon Sprint</div>
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <div class="stat-num" data-val="24">0</div><span class="stat-unit">h</span>
+                            <p class="stat-desc">Hackathon Sprint</p>
                         </div>
-                        <div class="stat-card">
-                            <div class="stat-value" data-value="1">0</div>
-                            <div class="stat-suffix">#</div>
-                            <div class="stat-label">Global Ranking</div>
+                        <div class="stat-box">
+                            <div class="stat-num" data-val="1">0</div><span class="stat-unit">#</span>
+                            <p class="stat-desc">Global Ranking</p>
                         </div>
-                        <div class="stat-card">
-                            <div class="stat-value" data-value="100">0</div>
-                            <div class="stat-suffix">%</div>
-                            <div class="stat-label">Responsive Design</div>
+                        <div class="stat-box">
+                            <div class="stat-num" data-val="100">0</div><span class="stat-unit">%</span>
+                            <p class="stat-desc">Responsive Design</p>
                         </div>
                     </div>
                 </div>
@@ -120,86 +101,81 @@
         </section>
 
         <section id="projects" class="tab-content">
-            <div class="container section-padding">
-                <div class="section-header">
-                    <h2 class="section-title">Case Study</h2>
-                    <div class="title-underline"></div>
+            <div class="container page-padding">
+                <div class="header-group">
+                    <h2 class="page-title">Case Study</h2>
+                    <div class="accent-line"></div>
                 </div>
                 
-                <div class="project-card-large">
-                    <div class="project-info">
-                        <span class="project-category">Web Development & Design</span>
+                <div class="case-card">
+                    <div class="case-info">
+                        <span class="case-tag">Web Development & Design</span>
                         <h3>Nomad Modernity E-Commerce</h3>
                         <p>A deep dive into creating a landing page that respects traditional Kazakh clothing while delivering a world-class digital shopping experience.</p>
-                        <ul class="project-tags">
-                            <li>Figma</li>
-                            <li>React</li>
-                            <li>UI/UX</li>
-                        </ul>
-                        <button class="btn btn-outline nav-link" data-target="contact">Inquire Project Details</button>
+                        <div class="tech-stack">
+                            <span>Figma</span>
+                            <span>React</span>
+                            <span>UI/UX</span>
+                        </div>
+                        <button class="btn btn-outline nav-link" data-target="contact">Inquire Now</button>
                     </div>
-                    <div class="project-image-box">
-                        <img src="assets/images/project-ethno.jpg" alt="Case Study: Nomad Modernity" class="case-img">
+                    <div class="case-media">
+                        <img src="assets/images/project-ethno.jpg" alt="Case Study" class="case-img">
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="skills" class="tab-content">
-            <div class="container section-padding">
-                <div class="section-header">
-                    <h2 class="section-title">Technical Expertise</h2>
-                    <div class="title-underline"></div>
+            <div class="container page-padding">
+                <div class="header-group">
+                    <h2 class="page-title">Technical Expertise</h2>
+                    <div class="accent-line"></div>
                 </div>
                 
-                <div class="skills-detailed-grid">
-                    <div class="skill-group">
-                        <div class="skill-icon">💻</div>
-                        <h3>Development</h3>
+                <div class="skills-grid-detailed">
+                    <div class="skill-item">
+                        <div class="skill-icon-box">💻</div>
+                        <h4>Development</h4>
                         <p>Expertise in semantic HTML5, CSS3 (SCSS), and modern ES6+ JavaScript. Building performant, accessible web applications.</p>
                     </div>
-                    <div class="skill-group">
-                        <div class="skill-icon">🎨</div>
-                        <h3>Design</h3>
+                    <div class="skill-item">
+                        <div class="skill-icon-box">🎨</div>
+                        <h4>Design</h4>
                         <p>Creating high-fidelity prototypes in Figma, focusing on typography, grid systems, and user behavior patterns.</p>
-                    </div>
-                    <div class="skill-group">
-                        <div class="skill-icon">⚙️</div>
-                        <h3>Tooling</h3>
-                        <p>Proficient with Git/GitHub, VS Code, and modern build tools to ensure a smooth development workflow.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="contact" class="tab-content">
-            <div class="container section-padding">
-                <div class="contact-grid">
-                    <div class="contact-header-box">
-                        <h2 class="section-title">Let's Connect</h2>
-                        <p>I am always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
-                        <div class="social-links-footer">
-                            <a href="#" class="social-link">LinkedIn</a>
-                            <a href="#" class="social-link">GitHub</a>
-                            <a href="#" class="social-link">Telegram</a>
+            <div class="container page-padding">
+                <div class="contact-flex">
+                    <div class="contact-text">
+                        <h2 class="page-title">Let's Connect</h2>
+                        <p>I am always open to discussing new projects, creative ideas or opportunities to be part of your vision.</p>
+                        <div class="footer-socials">
+                            <a href="#">LinkedIn</a>
+                            <a href="#">GitHub</a>
+                            <a href="#">Telegram</a>
                         </div>
                     </div>
                     
-                    <div class="form-container">
-                        <form id="contact-form" class="premium-form">
-                            <div class="input-group">
+                    <div class="contact-form-box">
+                        <form id="p-form" class="main-form">
+                            <div class="f-group">
                                 <label>Full Name</label>
-                                <input type="text" name="name" placeholder="Enter your name" required>
+                                <input type="text" placeholder="Sanjar Qabdylghani" required>
                             </div>
-                            <div class="input-group">
-                                <label>Email Address</label>
-                                <input type="email" name="email" placeholder="example@mail.com" required>
+                            <div class="f-group">
+                                <label>Email</label>
+                                <input type="email" placeholder="example@mail.com" required>
                             </div>
-                            <div class="input-group">
-                                <label>Your Message</label>
-                                <textarea name="message" rows="5" placeholder="Tell me about your project" required></textarea>
+                            <div class="f-group">
+                                <label>Message</label>
+                                <textarea rows="5" placeholder="Tell me about your project" required></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary full-width">Send Message</button>
+                            <button type="submit" class="btn btn-primary w-full">Send Message</button>
                         </form>
                     </div>
                 </div>
@@ -207,10 +183,10 @@
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="container footer-content">
-            <div class="footer-logo">SANJAR<span>.DEV</span></div>
-            <p class="copyright">&copy; 2026 Sanjar Qabdylghani. All rights reserved.</p>
+    <footer class="main-footer">
+        <div class="container footer-inner">
+            <div class="f-logo">SANJAR<span>.DEV</span></div>
+            <p class="f-copy">&copy; 2026 Sanjar Qabdylghani. All rights reserved.</p>
         </div>
     </footer>
 
