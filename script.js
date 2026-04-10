@@ -1,97 +1,90 @@
 /**
- * SANJAR.DEV - Core Navigation Logic
- * Исправленная версия для работы всех кнопок переключения.
+ * SANJAR.DEV - Ultimate Engine
+ * Вкладки + Мобильное меню + Анимация цифр + Форма
  */
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // 1. Инициализация элементов
-    // Ищем все элементы, у которых есть класс nav-link и атрибут data-target
-    const navLinks = document.querySelectorAll('.nav-link[data-target]');
+    // --- 1. ПЕРЕКЛЮЧЕНИЕ ВКЛАДОК (SPA) ---
+    const navLinks = document.querySelectorAll('.nav-link');
     const tabContents = document.querySelectorAll('.tab-content');
+    const navMenu = document.querySelector('.nav-menu');
 
-    /**
-     * Функция переключения вкладок (SPA)
-     */
     const switchTab = (targetId) => {
-        console.log('Switching to:', targetId); // Для отладки в консоли (F12)
-
-        // Убираем активный класс у всех навигационных ссылок
         navLinks.forEach(link => link.classList.remove('active'));
-
-        // Скрываем все секции контента
         tabContents.forEach(section => section.classList.remove('active'));
 
-        // Активируем ВСЕ кнопки, которые ведут на эту секцию (и в меню, и в тексте)
         const targetLinks = document.querySelectorAll(`[data-target="${targetId}"]`);
         targetLinks.forEach(link => link.classList.add('active'));
 
-        // Показываем нужную секцию
         const targetSection = document.getElementById(targetId);
         if (targetSection) {
             targetSection.classList.add('active');
-
-            // Скроллим в начало страницы при переключении
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-
-            // Запускаем анимацию цифр, если перешли в раздел "Experience" (about)
-            if (targetId === 'about') {
-                animateStats();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            
+            // Если переключились на About или Home, запускаем счетчики заново
+            if (targetId === 'about' || targetId === 'home') {
+                initStatsAnimation();
             }
         }
     };
 
-    // Вешаем обработчик клика на каждую кнопку/ссылку
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
-            e.preventDefault(); // Отменяем перезагрузку страницы
+            e.preventDefault();
             const targetId = link.getAttribute('data-target');
             if (targetId) {
                 switchTab(targetId);
+                
+                // Закрываем мобильное меню после клика
+                if (navMenu && navMenu.classList.contains('open')) {
+                    navMenu.classList.remove('open');
+                }
             }
         });
     });
 
-    /**
-     * Анимация счетчиков статистики
-     */
-    const animateStats = () => {
+
+    // --- 2. МОБИЛЬНОЕ МЕНЮ (БУРГЕР) ---
+    const mobileToggle = document.querySelector('.mobile-nav-toggle');
+
+    if (mobileToggle && navMenu) {
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('open');
+            mobileToggle.classList.toggle('active');
+        });
+    }
+
+
+    // --- 3. АНИМАЦИЯ ЦИФР (Твой оригинал) ---
+    const initStatsAnimation = () => {
         const stats = document.querySelectorAll('.stat-num');
         stats.forEach(stat => {
-            const originalText = stat.innerText;
-            const target = parseInt(originalText.replace(/[^0-9]/g, ''));
-
-            if (isNaN(target)) return;
-
+            const target = parseInt(stat.innerText);
+            if (isNaN(target)) return; 
+            
             let count = 0;
-            const duration = 1500; // 1.5 секунды
-            const increment = target / (duration / 16); // Примерно 60 кадров в сек
+            const duration = 1500; 
+            const increment = target / (duration / 16);
 
-            const update = () => {
+            const updateCount = () => {
                 if (count < target) {
                     count += increment;
-                    let displayValue = Math.ceil(count);
-
-                    // Сохраняем префиксы типа # или %
-                    if (originalText.includes('#')) displayValue = '#' + displayValue;
-                    if (originalText.includes('%')) displayValue = displayValue + '%';
-
-                    stat.innerText = displayValue;
-                    requestAnimationFrame(update);
+                    stat.innerText = Math.ceil(count) + (stat.innerText.includes('+') ? '+' : '');
+                    requestAnimationFrame(updateCount);
                 } else {
-                    stat.innerText = originalText;
+                    stat.innerText = target + (stat.innerText.includes('+') ? '+' : '');
                 }
             };
-            update();
+            updateCount();
         });
     };
 
-    /**
-     * Обработка формы контактов
-     */
+    // Запускаем при первой загрузке
+    initStatsAnimation();
+
+
+    // --- 4. ОБРАБОТКА ФОРМЫ ---
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
@@ -102,22 +95,17 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.innerText = 'SENDING...';
             submitBtn.disabled = true;
 
-            // Имитация отправки
             setTimeout(() => {
                 submitBtn.innerText = 'SENT!';
-                submitBtn.style.background = '#00ffaa';
-                alert('Success! Your message has been simulated as sent.');
-
+                alert('Сообщение "отправлено" (симуляция)!');
                 contactForm.reset();
-
                 setTimeout(() => {
                     submitBtn.innerText = originalText;
                     submitBtn.disabled = false;
-                    submitBtn.style.background = '';
                 }, 2000);
             }, 1000);
         });
     }
 
-    console.log("System Check: Navigation Ready.");
+    console.log("System Status: All systems nominal. Mobile support active.");
 });
